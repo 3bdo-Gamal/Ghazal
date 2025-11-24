@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\visualStudioFiles\\Ghazal\\Ghazal.csproj": {}
+    "C:\\Users\\El-Wattaneya\\Source\\Repos\\Ghazal\\Ghazal.csproj": {}
   },
   "projects": {
-    "D:\\visualStudioFiles\\Ghazal\\Ghazal.csproj": {
+    "C:\\Users\\El-Wattaneya\\Source\\Repos\\Ghazal\\Ghazal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\visualStudioFiles\\Ghazal\\Ghazal.csproj",
+        "projectUniqueName": "C:\\Users\\El-Wattaneya\\Source\\Repos\\Ghazal\\Ghazal.csproj",
         "projectName": "Ghazal",
-        "projectPath": "D:\\visualStudioFiles\\Ghazal\\Ghazal.csproj",
-        "packagesPath": "C:\\Users\\sigma\\.nuget\\packages\\",
-        "outputPath": "D:\\visualStudioFiles\\Ghazal\\obj\\",
+        "projectPath": "C:\\Users\\El-Wattaneya\\Source\\Repos\\Ghazal\\Ghazal.csproj",
+        "packagesPath": "C:\\Users\\El-Wattaneya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\El-Wattaneya\\Source\\Repos\\Ghazal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sigma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\El-Wattaneya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

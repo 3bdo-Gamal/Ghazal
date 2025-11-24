@@ -1,0 +1,11 @@
+﻿@model List<Category>
+
+<div>
+    @foreach (var cate in Model)
+    {
+        <div class="product-card">
+                <div class="product-name">@cate.CategName</div>
+        </div>
+        
+    }
+</div>

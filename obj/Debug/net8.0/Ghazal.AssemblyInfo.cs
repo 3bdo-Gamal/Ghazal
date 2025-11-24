@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ghazal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+185a72fd8edd020ab48d374f6eb274a189d267a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ghazal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ghazal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

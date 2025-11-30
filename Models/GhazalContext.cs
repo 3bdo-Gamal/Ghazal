@@ -18,25 +18,12 @@ namespace Ghazal.Models
         public DbSet<WishListItem> WishlistItems { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
 
-
-
-
-        public GhazalContext() : base() 
-        { 
-        }
-        //public GhazalContext(DbContextOptions<GhazalContext> options)
-        //: base(options)
-        //{
-        //}
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        
+        public GhazalContext(DbContextOptions<GhazalContext> options)
+            : base(options)
         {
-            optionsBuilder.UseMySql(
-                "server=localhost;port=3306;user=root;password=root;database=ghazalfinal",
-                new MySqlServerVersion(new Version(9, 0, 0)) 
-            );
-
-            base.OnConfiguring(optionsBuilder);
         }
+
+        
     }
 }

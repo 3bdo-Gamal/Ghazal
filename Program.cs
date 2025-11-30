@@ -1,3 +1,6 @@
+using Ghazal.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace Ghazal
 {
     public class Program
@@ -8,6 +11,13 @@ namespace Ghazal
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<GhazalContext>(options =>
+            options.UseMySql(
+             builder.Configuration.GetConnectionString("DefaultConnection"),
+             new MySqlServerVersion(new Version(8, 0, 41))
+             )
+             );
 
             var app = builder.Build();
 
@@ -29,6 +39,28 @@ namespace Ghazal
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<GhazalContext>();
+                try
+                {
+                    if (db.Database.CanConnect())
+                    {
+                        Console.WriteLine(" Successfully connected to the database!");
+                    }
+                    else
+                    {
+                        Console.WriteLine(" Failed to connect to the database.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($" Exception: {ex.Message}");
+                }
+            }
+
+           
 
             app.Run();
         }
